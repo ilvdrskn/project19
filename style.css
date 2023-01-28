@@ -215,11 +215,10 @@ p.foot {
     .modal-menu{
         position: absolute;
         z-index: 2;
-        top: 0em; right: -.5em;
-        width: 60%; height: 100%;
+        top: -.5em; right: -1em;
+        width: 60%; height: 240vh;
         background-color: white;
         border: 1px solid red;
-        grid-row: 1/span 4;
     }
 
     .dark {
