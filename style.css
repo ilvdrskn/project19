@@ -219,6 +219,7 @@ p.foot {
         width: 60%; height: 100%;
         background-color: white;
         border: 1px solid red;
+        grid-row: 1/span 4;
     }
 
     .dark {
