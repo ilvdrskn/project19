@@ -1,0 +1,109 @@
+:root {
+    --Softorange: hsl(35, 77%, 62%);
+    --Softred: hsl(5, 85%, 63%);
+    --Offwhite: hsl(36, 100%, 99%);
+    --Grayishblue: hsl(233, 8%, 79%);
+    --Darkgrayishblue: hsl(236, 13%, 42%);
+    --Verydarkblue: hsl(240, 100%, 5%);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url("./fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+body{ 
+    font-family: Inter;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-rows: 0.2fr 1fr .4fr;
+    padding: 1em;
+    position: relative;
+}
+
+.head {
+    display: flex;
+}
+
+header.head {
+    grid-row: 1/span 1;
+    grid-column: 1/span 2;
+    justify-content: space-between;
+}
+
+.svgMenu, .svgClose {
+    display: none;
+}
+
+nav.head {
+    gap: 3em;
+    margin-right: 1em;
+    font-size: 1.2em;
+    padding-top: .5em;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--Darkgrayishblue);
+}
+
+a:visited {
+    color: var(--Darkgrayishblue);
+}
+
+a:hover {
+    color: var(--Softorange);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: minmax(350px, 600px);
+        grid-template-rows: .2fr repeat(3, 1fr);
+    }
+
+    header.head {
+        grid-column: 1/spam 2;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .modal-menu{
+        position: absolute;
+        top: 0em; right: -.5em;
+        width: 60%; height: 100%;
+        background-color: var(--Offwhite);
+    }
+
+    nav.head {
+        flex-direction: column;
+        padding:3em 2em;
+    }
+
+    .svgMenu {
+        display: block;
+        margin-top: .5em;
+        margin-right: 2em;
+    }
+
+    .svgClose {
+        display: block;
+        position: absolute;
+        top: 1em;
+        right: 2em;
+    }
+}
+
+
+
