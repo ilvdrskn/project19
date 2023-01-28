@@ -60,6 +60,7 @@ nav.head {
     margin-right: 1em;
     font-size: 1.2em;
     padding-top: .5em;
+    background-color: white;
 }
 
 a:link {
@@ -180,6 +181,11 @@ h3.foot {
     margin-bottom: 1em;
 }
 
+h3.foot:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
 img {
     float: left;
     width: 40%;
@@ -208,9 +214,10 @@ p.foot {
 
     .modal-menu{
         position: absolute;
+        z-index: 2;
         top: 0em; right: -.5em;
         width: 60%; height: 100%;
-        background-color: var(--Offwhite);
+        background-color: white;
     }
 
     nav.head {
